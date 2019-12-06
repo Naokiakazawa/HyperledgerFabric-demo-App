@@ -16,7 +16,7 @@ echo -e "\n=====> updating and upgrading ubuntu packages\n"
 sudo apt update
 sudo apt -y upgrade
 echo -e "\n=====> installing the other ubuntu packages\n"
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common wget git build-essential
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common wget git build-essential golang
 sudo apt clean
 sudo rm -rf /var/lib/apt/lists/*
 #installing Docker and docker-compose
