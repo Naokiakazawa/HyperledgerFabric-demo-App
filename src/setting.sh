@@ -16,7 +16,7 @@ echo -e "\n=====> updating and upgrading ubuntu packages\n"
 sudo apt update
 sudo apt -y upgrade
 echo -e "\n=====> installing the other ubuntu packages\n"
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common wget git build-essential golang
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common wget git build-essential
 sudo apt clean
 sudo rm -rf /var/lib/apt/lists/*
 #installing Docker and docker-compose
@@ -35,14 +35,8 @@ echo -e "\n==> installing node.js@v10"
 echo -e "\n=====> installing node.js@v10\n"
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt install -y nodejs
-#version information
-echo -e "\n==> version information"
-echo -e "\n=====> docker version"
-sudo docker version
-echo -e "\n=====> docker-compose version"
-sudo docker-compose version
-echo -e "\n=====> nodejs version"
-sudo node -v
-echo -e "\n=====> npm version"
-sudo npm -v
+#installing Golang@v1.13
+wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.13.5.linux-amd64.tar.gz
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
 echo -e "\n==> exit and relogin !!"
