@@ -30,13 +30,13 @@ sudo apt install -y docker-ce
 echo -e "\n=====> installing docker-compose\n"
 sudo apt -y install docker-compose
 sudo usermod -aG docker vagrant
-#installing node.js@v10
-echo -e "\n==> installing node.js@v10"
-echo -e "\n=====> installing node.js@v10\n"
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+#installing node.js@v8
+echo -e "\n==> installing node.js@v8"
+echo -e "\n=====> installing node.js@v8\n"
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt install -y nodejs
-#installing Golang@v1.13
-wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.13.5.linux-amd64.tar.gz
+#installing Golang@v1.12
+wget https://dl.google.com/go/go1.12.14.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.12.14.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
 echo -e "\n==> exit and relogin !!"
