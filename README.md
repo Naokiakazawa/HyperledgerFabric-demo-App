@@ -24,11 +24,7 @@ chmod 777 ./src/setting.sh
 bash ./src/setting.sh
 ```
 
-check version after reload.
+Install HyperledgerFabricv1.4.4 after reload.
 ```bash
-docker version
-docker-compose version
-node --version
-npm --version
-go version
+curl -sSL http://bit.ly/2ysbOFE | bash -s 1.4.4
 ```
